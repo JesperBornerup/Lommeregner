@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Lommeregner">
+        <h1>
+            Lommeregner
+        </h1>
+        <label>Det første tal</label>
+        <input type="number" id="numberA"/>
+        <label>Det andet tal</label>
+        <input type="number" id="numberB"/>
+        <button onclick="add()">+</button>
+        <button onclick="substract()">-</button>
+        <button onclick="multiply()">*</button>
+        <!-- add new buttons -->
+        <h2 id="result">Result will be here</h2>
+    </div>
+    <script>
+        
+        var add = function(){
+            var a = Number($("#numberA").val());
+            var b = Number($("#numberB").val());
+
+            var sum = a + b;
+            
+            $("#result").html(sum);
+        }
+        var subtract = function(){
+            var a = Number($("#numberA").val());
+            var b = Number($("#numberB").val());
+
+            var diff; //do something
+
+            $("#result").html(diff);
+        }
+        var multiply = function(){
+            var a = Number($("#numberA").val());
+            var b = Number($("#numberB").val());
+
+            var product; // do something
+
+            $("#result").html(product);
+
+        }
+
+        // Add new functions
+
+    </script>
+</body>
+</html>
