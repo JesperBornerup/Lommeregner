@@ -2,11 +2,10 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="Lommeregner">
+        <!--  Add breaks to neaten layout -->
         <h1>
             Lommeregner
         </h1>
@@ -15,8 +14,9 @@
         <label>Det andet tal</label>
         <input type="number" id="numberB"/>
         <button onclick="add()">+</button>
-        <button onclick="substract()">-</button>
+        <button onclick="subtract()">-</button>
         <button onclick="multiply()">*</button>
+        
         <!-- add new buttons -->
         <h2 id="result">Result will be here</h2>
     </div>
@@ -45,10 +45,15 @@
             var product; // do something
 
             $("#result").html(product);
-
         }
+       
 
-        // Add new functions
+        // Add new functions to the new buttons
+
+        //Increment result
+        var incrementResult = function(){
+            
+        }
 
     </script>
 </body>
