@@ -9,10 +9,12 @@
         <h1>
             Lommeregner
         </h1>
-        <label>Det første tal</label>
-        <input type="number" id="numberA"/>
-        <label>Det andet tal</label>
-        <input type="number" id="numberB"/>
+        <label>Det første input. (a) </label>
+        <input id="inputA"/>
+        <label>Det andet input. (b)</label>
+        <input id="inputB"/>
+        <label>Det trejde input. (c)</label>
+        <input id="inputC"/><br>
         <button onclick="add()">+</button>
         <button onclick="subtract()">-</button>
         <button onclick="multiply()">*</button>
@@ -23,37 +25,55 @@
     <script>
         
         var add = function(){
-            var a = Number($("#numberA").val());
-            var b = Number($("#numberB").val());
+            var a = Number($("#inputA").val());
+            var b = Number($("#inputB").val());
 
             var sum = a + b;
             
             $("#result").html(sum);
         }
         var subtract = function(){
-            var a = Number($("#numberA").val());
-            var b = Number($("#numberB").val());
+            var a = Number($("#inputA").val());
+            var b = Number($("#inputB").val());
 
             var diff; //do something
 
             $("#result").html(diff);
         }
         var multiply = function(){
-            var a = Number($("#numberA").val());
-            var b = Number($("#numberB").val());
+            var a = Number($("#inputA").val());
+            var b = Number($("#inputB").val());
 
             var product; // do something
 
             $("#result").html(product);
         }
-       
+        // skriv funktionerne
+        var diskriminant = function(){
 
-        // Add new functions to the new buttons
-
-        //Increment result
-        var incrementResult = function(){
-            
         }
+        var løs2grads = function(){
+
+        }
+        var minVal = function(){
+
+        }
+        var maxVal =  function(){
+
+        }
+        var midVal =  function(){
+
+        }
+        var showString = function(){
+
+        }
+        var reverseString = function(){
+
+        }
+
+
+       
+        
 
     </script>
 </body>
