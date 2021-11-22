@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -15,66 +16,21 @@
         <input id="inputB"/>
         <label>Det trejde input. (c)</label>
         <input id="inputC"/><br>
-        <button onclick="add()">+</button>
-        <button onclick="subtract()">-</button>
-        <button onclick="multiply()">*</button>
+        <button onclick="pressButton('add')">+</button>
+        <button onclick="testButton('add')">Test: +</button>
+        <button onclick="pressButton('subtract')">-</button>
+        <button onclick="pressButton('multiply')">*</button>
+        <button onclick="pressButton('diskriminant')">disk</button>
+        <button onclick="testButton('diskriminant')">Test: disk</button>
+        <button onclick="pressButton('minVal')">min</button>
+        <button onclick="testButton('minVal')">Test: min</button>
         
         <!-- add new buttons -->
         <h2 id="result">Result will be here</h2>
+        <p id="testOutput"></p>
     </div>
-    <script>
-        
-        var add = function(){
-            var a = Number($("#inputA").val());
-            var b = Number($("#inputB").val());
-
-            var sum = a + b;
-            
-            $("#result").html(sum);
-        }
-        var subtract = function(){
-            var a = Number($("#inputA").val());
-            var b = Number($("#inputB").val());
-
-            var diff; //do something
-
-            $("#result").html(diff);
-        }
-        var multiply = function(){
-            var a = Number($("#inputA").val());
-            var b = Number($("#inputB").val());
-
-            var product; // do something
-
-            $("#result").html(product);
-        }
-        // skriv funktionerne
-        var diskriminant = function(){
-
-        }
-        var løs2grads = function(){
-
-        }
-        var minVal = function(){
-
-        }
-        var maxVal =  function(){
-
-        }
-        var midVal =  function(){
-
-        }
-        var showString = function(){
-
-        }
-        var reverseString = function(){
-
-        }
-
-
-       
-        
-
-    </script>
+    <script src="app.js"></script>
+    <script src="unitTests.js"></script>
+    
 </body>
 </html>
