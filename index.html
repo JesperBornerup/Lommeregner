@@ -6,7 +6,6 @@
 </head>
 <body>
     <div id="Lommeregner">
-        <!--  Add breaks to neaten layout -->
         <h1>
             Lommeregner
         </h1>
@@ -16,16 +15,25 @@
         <input id="inputB"/>
         <label>Det trejde input. (c)</label>
         <input id="inputC"/><br>
+        <h1>Funktioner</h1>
         <button onclick="pressButton('add')">+</button>
-        <button onclick="testButton('add')">Test: +</button>
         <button onclick="pressButton('subtract')">-</button>
         <button onclick="pressButton('multiply')">*</button>
         <button onclick="pressButton('diskriminant')">disk</button>
-        <button onclick="testButton('diskriminant')">Test: disk</button>
         <button onclick="pressButton('minVal')">min</button>
-        <button onclick="testButton('minVal')">Test: min</button>
+        <button onclick="pressButton('midVal')">mid</button>
+        <button onclick="pressButton('maxVal')">max</button>
+        <button onclick="pressButton('showString')">showStr</button>
+        <button onclick="pressButton('reverseString')">revStr</button>
         
-        <!-- add new buttons -->
+        <h1>Tests</h1>
+        <button onclick="testButton('add')">Test: +</button>
+        <button onclick="testButton('minVal')">Test: min</button>
+        <button onclick="testButton('midVal')">Test: mid</button>
+        <button onclick="testButton('maxVal')">Test: max</button>
+        <button onclick="testButton('showString')">Test: showStr</button>
+        <button onclick="testButton('reverseString')">Test: revStr</button>
+        
         <h2 id="result">Result will be here</h2>
         <p id="testOutput"></p>
     </div>

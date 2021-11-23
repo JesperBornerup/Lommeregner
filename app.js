@@ -13,11 +13,20 @@ var pressButton = function(action){
         result = diskriminant(Number(a), Number(b), Number(c));
     } else if (action === "minVal"){
         result = minVal(Number(a), Number(b), Number(c));
+    }else if (action === "midVal"){
+        result = midVal(Number(a), Number(b), Number(c));
+    }else if (action === "maxVal"){
+        result = maxVal(Number(a), Number(b), Number(c));
+    }else if (action === "showString"){
+        result = showString(a, b, c);
+    }else if (action === "reverseString"){
+        result = reverseString(a, b, c);
     }else {
         result = "No action corresponding to " + action;
     }
     $('#result').html(result);
 }
+
 var add = function(a, b){
     return a + b;
 }
@@ -28,9 +37,9 @@ var multiply = function(a, b){
     return a * b;
 }
 
-// skriv funktionerne
+// skriv inhold til funktionerne
 var diskriminant = function(a, b, c){
-    return 0;
+    return 0    ;
 }
 var løs2grads = function(a, b, c){
     return "0 og 1";
@@ -46,10 +55,10 @@ var midVal =  function(a, b, c){
     return 0;
 }
 var showString = function(a, b, c){
-    return "1 2 3";
+    return "Jeg er skøn";
 }
 var reverseString = function(a, b, c){
-    return "dig med hej";
+    return "skøn jeg er";
 }
 
 

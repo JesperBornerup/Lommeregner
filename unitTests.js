@@ -5,6 +5,14 @@ var testButton =  function(action){
         result = testdiskriminant();
     }else if(action == "minVal"){
         result = testminVal();
+    }else if(action == "midVal"){
+        result = testmidVal();
+    }else if(action == "maxVal"){
+        result = testmaxVal();
+    }else if(action == "showString"){
+        result = testshowString();
+    }else if(action == "reverseString"){
+        result = testreverseString();
     }
     $("#result").html(result);
 }
@@ -93,14 +101,109 @@ var testminVal = function(a, b, c){
     return runTests(minVal, data);
 }
 var testmaxVal =  function(a, b, c){
-    return;
+    data = [{
+        a: 1,
+        b: 2,
+        c: 3,
+        expected: 3
+    },{
+        a: -1,
+        b: -8,
+        c: 2,
+        expected: 2
+    },{
+        a: 123,
+        b: -987,
+        c: 567,
+        expected: 567
+    },{
+        a: 122,
+        b: 122,
+        c: 567,
+        expected: 567
+    },{
+        a: 122,
+        b: 122,
+        c: 122,
+        expected: 122
+    }];
+    return runTests(maxVal, data);
 }
 var testmidVal =  function(a, b, c){
-    return;
+    data = [{
+        a: 1,
+        b: 2,
+        c: 3,
+        expected: 2
+    },{
+        a: -1,
+        b: -8,
+        c: 2,
+        expected: -1
+    },{
+        a: 123,
+        b: -987,
+        c: 567,
+        expected: 123
+    },{
+        a: 122,
+        b: 122,
+        c: 567,
+        expected: 122
+    },{
+        a: 122,
+        b: 122,
+        c: 122,
+        expected: 122
+    }];
+    return runTests(midVal, data);
 }
 var testshowString = function(a, b, c){
-    return;
+
+    data = [{
+        a: "hej",
+        b: "med",
+        c: "dig",
+        expected: "hej med dig"
+    },{
+        a: "Lev",
+        b: "vel",
+        c: "Frank",
+        expected: "Lev vel Frank"
+    },{
+        a: "1",
+        b: "2",
+        c: "3",
+        expected:"1 2 3"
+    },{
+        a: "Sådan",
+        b: "går",
+        c: "det.",
+        expected: "Sådan går det."
+    }];
+    return runTests(showString, data);
 }
 var testreverseString = function(a, b, c){
-    return;
+    data = [{
+        a: "hej",
+        b: "med",
+        c: "dig",
+        expected: "dig med hej"
+    },{
+        a: "Lev",
+        b: "vel",
+        c: "Frank",
+        expected: "Frank vel Lev"
+    },{
+        a: "1",
+        b: "2",
+        c: "3",
+        expected:"3 2 1"
+    },{
+        a: "Virum",
+        b: "Gymnasium",
+        c: "Styrer",
+        expected: "Styrer Virum Gymnasium"
+    }];
+    return runTests(reverseString, data);
 }
