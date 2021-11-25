@@ -13,6 +13,12 @@ var testButton =  function(action){
         result = testshowString();
     }else if(action == "reverseString"){
         result = testreverseString();
+    }else if(action == "løs2grads"){
+        result = testløs2grads();
+    }else if(action == "sortByLength"){
+        result = testsortByLength();
+    }else if(action == "sortByAlphabet"){
+        result = testsortByAlphabet();
     }
     $("#result").html(result);
 }
@@ -69,7 +75,23 @@ var testdiskriminant = function(a, b, c){
     return runTests(diskriminant, data);
 }
 var testløs2grads = function(a, b, c){
-    return;
+    data = [{
+        a: 1,
+        b: 2,
+        c: 3,
+        expected: "Der findes ingen løsninger"
+    },{
+        a: -1,
+        b: -8,
+        c: 2,
+        expected: "udfyld selv"
+    },{
+        a: 123,
+        b: 987,
+        c: 567,
+        expected: "udfyld selv"
+    }];
+    return runTests(løs2grads, data);
 }
 var testminVal = function(a, b, c){
     data = [{
@@ -206,4 +228,52 @@ var testreverseString = function(a, b, c){
         expected: "Styrer Virum Gymnasium"
     }];
     return runTests(reverseString, data);
+}
+var testsortByLength = function(a, b, c){
+    data = [{
+        a: "hej",
+        b: "mette",
+        c: "jørgensen",
+        expected: "hej mette jørgensen"
+    },{
+        a: "Lev",
+        b: "vagt",
+        c: "Frank",
+        expected: "Lev vagt Frank"
+    },{
+        a: "-----",
+        b: "--",
+        c: "--",
+        expected:"-- -- -----"
+    },{
+        a: "Virum",
+        b: "Gymnasium",
+        c: "Styrer",
+        expected: "Virum Styrer Gymnasium"
+    }];
+    return runTests(sortByLength, data);
+}
+var testsortByAlphabet = function(a, b, c){
+    data = [{
+        a: "hej",
+        b: "mette",
+        c: "jørgensen",
+        expected: "hej jørgensen mette"
+    },{
+        a: "Lev",
+        b: "vagt",
+        c: "Frank",
+        expected: "Lev Frank vagt"
+    },{
+        a: "a",
+        b: "b",
+        c: "c",
+        expected:"a b c"
+    },{
+        a: "Virum",
+        b: "Gymnasium",
+        c: "Styrer",
+        expected: "Gymnasium Styrer Virum"
+    }];
+    return runTests(sortByAlphabet, data);
 }

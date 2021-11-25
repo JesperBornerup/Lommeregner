@@ -3,6 +3,7 @@ var pressButton = function(action){
     var a = $("#inputA").val();
     var b = $("#inputB").val();
     var c = $("#inputC").val();
+    console.log(action);
     if(action === "add"){
         result = add(Number(a), Number(b));
     } else if (action === "multiply"){
@@ -21,6 +22,12 @@ var pressButton = function(action){
         result = showString(a, b, c);
     }else if (action === "reverseString"){
         result = reverseString(a, b, c);
+    }else if (action === "løs2grads"){
+        result = løs2grads(Number(a), Number(b), Number(c));
+    }else if (action === "sortByLength"){
+        result = sortByLength(a, b, c);
+    }else if (action === "sortByAlphabet"){
+        result = sortByAlphabet(a, b, c);
     }else {
         result = "No action corresponding to " + action;
     }
@@ -37,12 +44,12 @@ var multiply = function(a, b){
     return a * b;
 }
 
-// skriv inhold til funktionerne
+// skriv inhold til funk
 var diskriminant = function(a, b, c){
     return 0    ;
 }
 var løs2grads = function(a, b, c){
-    return "0 og 1";
+    return "0 og 1" // eller "3" eller "Der findes ingen løsninger";
 }
 var minVal = function(a, b, c){
 
@@ -59,6 +66,12 @@ var showString = function(a, b, c){
 }
 var reverseString = function(a, b, c){
     return "skøn jeg er";
+}
+var sortByLength = function(a, b, c){
+    return "er jeg lang";
+}
+var sortByAlphabet = function(a, b, c){
+    return "er jeg lang";
 }
 
 
