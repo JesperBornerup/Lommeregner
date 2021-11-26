@@ -73,6 +73,9 @@ var sortByLength = function(a, b, c){
 var sortByAlphabet = function(a, b, c){
     return "er jeg lang";
 }
+var navneLængde = function(a, b, c){
+    return 10;
+}
 
 
        
