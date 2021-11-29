@@ -19,6 +19,14 @@ var testButton =  function(action){
         result = testsortByLength();
     }else if(action == "sortByAlphabet"){
         result = testsortByAlphabet();
+    }else if(action == "kampPoint"){
+        result = testkampPoint();
+    }else if(action == "seriePoint"){
+        result = testseriePoint();
+    }else if(action == "vinder"){
+        result = testvinder();
+    }else{
+        console.log("Error: no such test")
     }
     $("#result").html(result);
 }
@@ -276,4 +284,63 @@ var testsortByAlphabet = function(a, b, c){
         expected: "Gymnasium Styrer Virum"
     }];
     return runTests(sortByAlphabet, data);
+}
+var testkampPoint = function(a, b, c){
+    data = [{
+        a: "V",
+        b: "",
+        c: "",
+        expected: 3
+    },{
+        a: "T",
+        b: "",
+        c: "",
+        expected: 0
+    },{
+        a: "U",
+        b: "",
+        c: "",
+        expected: 1
+    }];
+    return runTests(kampPoint, data);
+}
+var testseriePoint = function(a, b, c){
+    data = [{
+        a: "VVV",
+        expected: 3
+    },{
+        a: "VVU",
+        expected: 7
+    },{
+        a: "",
+        expected: 0
+    },{
+        a: "TTUUTTVV",
+        expected: 8
+    }];
+    return runTests(seriePoint, data);
+}
+var testvinder = function(a, b, c){
+    data = [{
+        a: "VVTTUU",
+        b: "VVTTUU",
+        c: "VVTTUU",
+        expected: "uafgjort"
+    },{
+        a: "VVTTUV",
+        b: "VVTTUU",
+        c: "VVTTUU",
+        expected: "a"
+    },{
+        a: "VTTUV",
+        b: "VTTVV",
+        c: "VTTUU",
+        expected:"b"
+    },{
+        a: "",
+        b: "",
+        c: "",
+        expected: "uafgjort"
+    }];
+    return runTests(vinder, data);
 }

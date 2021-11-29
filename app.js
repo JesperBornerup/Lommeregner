@@ -28,6 +28,12 @@ var pressButton = function(action){
         result = sortByLength(a, b, c);
     }else if (action === "sortByAlphabet"){
         result = sortByAlphabet(a, b, c);
+    }else if (action === "kampPoint"){
+        result = kampPoint(a);
+    }else if (action === "seriePoint"){
+        result = seriePoint(a);
+    }else if (action === "vinder"){
+        result = vinder(a, b, c);
     }else {
         result = "No action corresponding to " + action;
     }
@@ -76,7 +82,18 @@ var sortByAlphabet = function(a, b, c){
 var navneLængde = function(a, b, c){
     return 10;
 }
-
+var kampPoint = function(a, b, c){
+    return 0;
+}
+var seriePoint = function(a, b, c){
+    return 0;
+}
+var vinder =  function(a, b, c){
+    return "a";
+}
+var løkke = function(a,b,c){
+    return "ingenting";
+}
 
        
         
