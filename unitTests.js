@@ -307,7 +307,7 @@ var testkampPoint = function(a, b, c){
 var testseriePoint = function(a, b, c){
     data = [{
         a: "VVV",
-        expected: 3
+        expected: 9
     },{
         a: "VVU",
         expected: 7

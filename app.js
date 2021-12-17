@@ -34,7 +34,9 @@ var pressButton = function(action){
         result = seriePoint(a);
     }else if (action === "vinder"){
         result = vinder(a, b, c);
-    }else {
+    }else if (action === "løkke"){
+        result = løkke(a,b,c);
+    } else {
         result = "No action corresponding to " + action;
     }
     $('#result').html(result);
@@ -91,9 +93,28 @@ var seriePoint = function(a, b, c){
 var vinder =  function(a, b, c){
     return "a";
 }
-var løkke = function(a,b,c){
-    return "ingenting";
+var løkke = function(a, b, c){
+   var len = a.length;
+   var sum = 0;
+   for(var i = 0; i < len; i++){
+       sum +=  Number(a.charAt(i))
+   }
+   return sum;
+
 }
+/*
+var løkke = function(a,b,c){
+    var i = 0;
+    var out = ""+i;
+    while(i<10){
+        console.log(i);
+        i++;
+        out += ", "+i
+    }
+    return out;
+
+*/
 
        
         
+//test
