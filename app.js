@@ -43,6 +43,8 @@ var pressButton = function(action){
 }
 
 var add = function(a, b){
+    localStorage.setItem("a",String(a));
+    localStorage.setItem("b",String(b));
     return a + b;
 }
 var subtract = function(a, b){
@@ -102,19 +104,3 @@ var løkke = function(a, b, c){
    return sum;
 
 }
-/*
-var løkke = function(a,b,c){
-    var i = 0;
-    var out = ""+i;
-    while(i<10){
-        console.log(i);
-        i++;
-        out += ", "+i
-    }
-    return out;
-
-*/
-
-       
-        
-//test
