@@ -1,34 +1,34 @@
 var testButton =  function(action){
-    if(action == "add"){
+    if(action == "add")
         result = testadd();
-    }else if(action == "diskriminant"){
+    else if(action == "diskriminant")
         result = testdiskriminant();
-    }else if(action == "minVal"){
+    else if(action == "minVal")
         result = testminVal();
-    }else if(action == "midVal"){
+    else if(action == "midVal")
         result = testmidVal();
-    }else if(action == "maxVal"){
+    else if(action == "maxVal")
         result = testmaxVal();
-    }else if(action == "showString"){
+    else if(action == "showString")
         result = testshowString();
-    }else if(action == "reverseString"){
+    else if(action == "reverseString")
         result = testreverseString();
-    }else if(action == "løs2grads"){
+    else if(action == "løs2grads")
         result = testløs2grads();
-    }else if(action == "sortByLength"){
+    else if(action == "sortByLength")
         result = testsortByLength();
-    }else if(action == "sortByAlphabet"){
+    else if(action == "sortByAlphabet")
         result = testsortByAlphabet();
-    }else if(action == "kampPoint"){
+    else if(action == "kampPoint")
         result = testkampPoint();
-    }else if(action == "seriePoint"){
+    else if(action == "seriePoint")
         result = testseriePoint();
-    }else if(action == "vinder"){
+    else if(action == "vinder")
         result = testvinder();
-    }else{
+    else
         console.log("Error: no such test")
-    }
-    $("#result").html(result);
+    
+    document.getElementById("result").innerHTML = result;
 }
 var runTests = function(func, data){
     displayString = "";
@@ -40,7 +40,7 @@ var runTests = function(func, data){
             " passed</span><br>";
         } else {
             displayString += "<span style='color: #ff0000'>Test " + (i+1) + 
-            " failed. Got "+ yourResult +" when "+ JSON.stringify(data[i]) +".</span><br>";
+            " failed. Got "+ yourResult +" with test input "+ JSON.stringify(data[i]) +".</span><br>";
         }
     }
     return displayString;

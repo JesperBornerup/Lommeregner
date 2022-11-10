@@ -1,43 +1,27 @@
 
 var pressButton = function(action){
-    var a = document.getElementById("inputA").value;
-    var b = document.getElementById("inputB").value;
-    var c = document.getElementById("inputC").value;
-    console.log(action);
-    if(action === "add"){
-        result = add(Number(a), Number(b));
-    } else if (action === "multiply"){
-        result = multiply(Number(a), Number(b));
-    } else if (action === "subtract"){
-        result = subtract(Number(a), Number(b));
-    } else if (action === "diskriminant"){
-        result = diskriminant(Number(a), Number(b), Number(c));
-    } else if (action === "minVal"){
-        result = minVal(Number(a), Number(b), Number(c));
-    }else if (action === "midVal"){
-        result = midVal(Number(a), Number(b), Number(c));
-    }else if (action === "maxVal"){
-        result = maxVal(Number(a), Number(b), Number(c));
-    }else if (action === "showString"){
-        result = showString(a, b, c);
-    }else if (action === "reverseString"){
-        result = reverseString(a, b, c);
-    }else if (action === "løs2grads"){
-        result = løs2grads(Number(a), Number(b), Number(c));
-    }else if (action === "sortByLength"){
-        result = sortByLength(a, b, c);
-    }else if (action === "sortByAlphabet"){
-        result = sortByAlphabet(a, b, c);
-    }else if (action === "kampPoint"){
-        result = kampPoint(a);
-    }else if (action === "seriePoint"){
-        result = seriePoint(a);
-    }else if (action === "vinder"){
-        result = vinder(a, b, c);
-    } else {
-        result = "No action corresponding to " + action;
-    }
-    $('#result').html(result);
+    var inA = document.getElementById("inputA").value;
+    var inB = document.getElementById("inputB").value;
+    var inC = document.getElementById("inputC").value;
+    let actions = {
+        "add": add(Number(inA), Number(inB)),
+        "multiply": multiply(Number(inA), Number(inB)),
+        "subtract": subtract(Number(inA), Number(inB)),
+        "diskriminant": diskriminant(Number(inA), Number(inB), Number(inC)),
+        "minVal": minVal(Number(inA), Number(inB), Number(inC)),
+        "midVal": midVal(Number(inA), Number(inB), Number(inC)),
+        "maxVal": maxVal(Number(inA), Number(inB), Number(inC)),
+        "showString": showString(inA, inB, inC),
+        "reverse": reverseString(inA, inB, inC),
+        "løs2grads": løs2grads(Number(inA), Number(inB), Number(inC)),
+        "sortByLength": sortByLength(inA, inB, inC),
+        "sortByAlphabet": sortByAlphabet(inA, inB, inC),
+        "kampPoiont": kampPoint(inA),
+        "seriePoint": seriePoint(inA),
+        "vinder": vinder(inA, inB, inC),
+    };
+    result = actions[action];
+    document.getElementById("result").innerHTML = result;
 }
 
 var add = function(a, b){
