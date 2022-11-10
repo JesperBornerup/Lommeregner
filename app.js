@@ -1,8 +1,8 @@
 
 var pressButton = function(action){
-    var a = $("#inputA").val();
-    var b = $("#inputB").val();
-    var c = $("#inputC").val();
+    var a = document.getElementById("inputA").value;
+    var b = document.getElementById("inputB").value;
+    var c = document.getElementById("inputC").value;
     console.log(action);
     if(action === "add"){
         result = add(Number(a), Number(b));
@@ -34,8 +34,6 @@ var pressButton = function(action){
         result = seriePoint(a);
     }else if (action === "vinder"){
         result = vinder(a, b, c);
-    }else if (action === "løkke"){
-        result = løkke(a,b,c);
     } else {
         result = "No action corresponding to " + action;
     }
@@ -43,17 +41,14 @@ var pressButton = function(action){
 }
 
 var add = function(a, b){
-    localStorage.setItem("a",String(a));
-    localStorage.setItem("b",String(b));
     return a + b;
 }
 var subtract = function(a, b){
-    return a - b;
+    return 0;
 }
 var multiply = function(a, b){
-    return a * b;
+    return 0;
 }
-
 // skriv inhold til funk
 var diskriminant = function(a, b, c){
     return 0    ;
@@ -94,13 +89,4 @@ var seriePoint = function(a, b, c){
 }
 var vinder =  function(a, b, c){
     return "a";
-}
-var løkke = function(a, b, c){
-   var len = a.length;
-   var sum = 0;
-   for(var i = 0; i < len; i++){
-       sum +=  Number(a.charAt(i))
-   }
-   return sum;
-
 }
