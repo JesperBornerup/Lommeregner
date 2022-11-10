@@ -51,6 +51,9 @@ var maxVal =  function(a, b, c){
     if (c>a) {return c}
     if (b>c) {return b}
     if (c>b) {return c}
+    if (a>b>c) {return a}
+    if (b>a>c) {return b}
+    if (c>a>b) {return c}
 }
 var midVal =  function(a, b, c){
     return 0;
