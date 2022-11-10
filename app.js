@@ -42,7 +42,15 @@ var løs2grads = function(a, b, c){
 }
 var minVal = function(a, b, c){
 
-    return 0;
+    if(a<b && a<c) {return a }
+    
+    if (b<c && b<a){return b}
+
+    else {return c}
+
+
+
+    
 }
 var maxVal =  function(a, b, c){
     return 0;
