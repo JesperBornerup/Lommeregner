@@ -45,7 +45,7 @@ var minVal = function(a, b, c){
     return 0;
 }
 var maxVal =  function(a, b, c){
-    return 0;
+    if(b>a){return b}
 }
 var midVal =  function(a, b, c){
     return 0;
