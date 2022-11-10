@@ -31,7 +31,7 @@ var subtract = function(a, b){
     return 0;
 }
 var multiply = function(a, b){
-    return 0;
+    return a * b;
 }
 // skriv inhold til funk
 var diskriminant = function(a, b, c){
