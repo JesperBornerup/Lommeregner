@@ -31,7 +31,7 @@ var subtract = function(a, b){
     return a-b;
 }
 var multiply = function(a, b){
-    return 0;
+    return a * b;
 }
 // skriv inhold til funk
 var diskriminant = function(a, b, c){
@@ -53,7 +53,11 @@ var minVal = function(a, b, c){
     
 }
 var maxVal =  function(a, b, c){
-    return 0;
+    
+    if(a>b && a>c) {return a}
+    if(b>a && b>c){return b}
+   else {return c}
+
 }
 var midVal =  function(a, b, c){
     if(a<b && a>c) {return a }
