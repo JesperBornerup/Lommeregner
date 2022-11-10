@@ -45,15 +45,11 @@ var minVal = function(a, b, c){
     return 0;
 }
 var maxVal =  function(a, b, c){
-    if(b>a){return b}
-    if(a>b) {return a}
-    if(a>c) {return a}
-    if (c>a) {return c}
-    if (b>c) {return b}
-    if (c>b) {return c}
-    if (a>b>c) {return a}
-    if (b>a>c) {return b}
-    if (c>a>b) {return c}
+    
+    if(a>b && a>c) {return a}
+    if(b>a && b>c){return b}
+   else {return c}
+
 }
 var midVal =  function(a, b, c){
     return 0;
