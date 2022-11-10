@@ -87,7 +87,11 @@ var kampPoint = function(a, b, c){
     return 0;
 }
 var seriePoint = function(a, b, c){
-    return 0;
+    if (a=VVV) {return 9}
+    if (a=VVU) {return 7}
+    if (a=VUU) {return 5}
+    if (a=UUU) {return 3}
+
 }
 var vinder =  function(a, b, c){
     return "a";
