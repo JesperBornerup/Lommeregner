@@ -16,7 +16,7 @@ var pressButton = function(action){
         "løs2grads": løs2grads(Number(inA), Number(inB), Number(inC)),
         "sortByLength": sortByLength(inA, inB, inC),
         "sortByAlphabet": sortByAlphabet(inA, inB, inC),
-        "kampPoiont": kampPoint(inA),
+        "kampPoint": kampPoint(inA),
         "seriePoint": seriePoint(inA),
         "vinder": vinder(inA, inB, inC),
     };
@@ -61,10 +61,11 @@ var maxVal =  function(a, b, c){
 }
 var midVal =  function(a, b, c){
     if(a<b && a>c) {return a }
-    
-    
+    if(a<c && a>b) {return a }
+
 
     if (b<c && b>a){return b}
+    if (b<a && b>c){return b}
 
     else {return c}
 }
@@ -83,8 +84,12 @@ var sortByAlphabet = function(a, b, c){
 var navneLængde = function(a, b, c){
     return 10;
 }
-var kampPoint = function(a, b, c){
-    return 0;
+var kampPoint = function(a){
+
+    if (a=="V"){return 3};
+    if (a=="U"){return 1};
+    if (a=="T"){return 0};
+    
 }
 var seriePoint = function(a, b, c){
     return 0;
